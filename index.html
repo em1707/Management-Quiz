@@ -1,0 +1,1566 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fundamentals of Management Quiz</title>
+    <!-- Load Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Load Inter font -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <style>
+        /* Use Inter as the default font */
+        body {
+            font-family: 'Inter', sans-serif;
+        }
+        /* Custom styles for quiz options */
+        .quiz-option {
+            display: block;
+            padding: 0.85rem 1.25rem;
+            border: 1px solid #D1D5DB; /* gray-300 */
+            border-radius: 0.5rem; /* rounded-lg */
+            margin-bottom: 0.75rem;
+            cursor: pointer;
+            transition: all 0.15s ease-in-out;
+        }
+        .quiz-option:hover {
+            background-color: #F9FAFB; /* gray-50 */
+            border-color: #6B7280; /* gray-500 */
+        }
+        
+        /* New class to apply to the label for selection */
+        .selected-option {
+            border-color: #3B82F6 !important; /* blue-500 */
+            background-color: #EFF6FF; /* blue-50 */
+            box-shadow: 0 0 0 2px #3B82F6; /* Ring effect */
+        }
+
+        /* Styles for showing correct/incorrect answers */
+        .correct-answer {
+            background-color: #D1FAE5; /* green-100 */
+            border-color: #10B981 !important; /* green-500 */
+            box-shadow: 0 0 0 2px #10B981; /* Ring effect */
+        }
+
+        .incorrect-answer {
+            background-color: #FEE2E2; /* red-100 */
+            border-color: #EF4444 !important; /* red-500 */
+            box-shadow: 0 0 0 2px #EF4444; /* Ring effect */
+        }
+    </style>
+</head>
+<body class="bg-gray-50 text-gray-800 transition-colors duration-200">
+
+    <div class="container mx-auto max-w-3xl p-4 sm:p-8">
+        <!-- Header -->
+        <header class="mb-10 text-center pt-8 sm:pt-0">
+            <h1 class="text-4xl sm:text-5xl font-extrabold text-gray-900 bg-clip-text text-transparent bg-gradient-to-r from-blue-600 to-purple-500 pb-2">
+                Fundamentals of Management
+            </h1>
+            <p class="text-lg text-gray-600 mt-2">Test your knowledge based on the presentation.</p>
+        </header>
+
+        <!-- Quiz Form -->
+        <form id="quiz-form" class="bg-white p-6 sm:p-10 rounded-xl shadow-lg space-y-10">
+
+            <!-- Section 1: Multiple Choice Questions -->
+            <section class="space-y-6">
+                <h2 class="text-2xl sm:text-3xl font-semibold border-b border-gray-200 pb-3 text-gray-900">Part 1: Multiple Choice</h2>
+
+                <!-- Question 1 -->
+                <div class="quiz-question" data-question-id="mcq1" data-correct-answer="b">
+                    <p class="text-lg font-medium mb-3">1. According to the presentation, management is the process of coordinating and overseeing work to achieve organizational goals __________ and __________.</p>
+                    <label class="quiz-option">
+                        <input type="radio" name="mcq1" value="a" class="mr-3">
+                        <span>a) quickly; cheaply</span>
+                    </label>
+                    <label class="quiz-option">
+                        <input type="radio" name="mcq1" value="b" class="mr-3">
+                        <span>b) effectively; efficiently</span>
+                    </label>
+                    <label class="quiz-option">
+                        <input type="radio" name="mcq1" value="c" class="mr-3">
+                        <span>c) creatively; scientifically</span>
+                    </label>
+                    <label class="quiz-option">
+                        <input type="radio" name="mcq1" value="d" class="mr-3">
+                        <span>d) individually; as a group</span>
+                    </label>
+                </div>
+
+                <!-- Question 2 -->
+                <div class="quiz-question" data-question-id="mcq2" data-correct-answer="c">
+                    <p class="text-lg font-medium mb-3">2. "Doing the right things," or achieving organizational goals, is known as:</p>
+                    <label class="quiz-option">
+                        <input type="radio" name="mcq2" value="a" class="mr-3">
+                        <span>a) Efficiency</span>
+                    </label>
+                    <label class="quiz-option">
+                        <input type="radio" name="mcq2" value="b" class="mr-3">
+                        <span>b) Pervasiveness</span>
+                    </label>
+                    <label class="quiz-option">
+                        <input type="radio" name="mcq2" value="c" class="mr-3">
+                        <span>c) Effectiveness</span>
+                    </label>
+                    <label class="quiz-option">
+                        <input type="radio" name="mcq2" value="d" class="mr-3">
+                        <span>d) Coordination</span>
+                    </label>
+                </div>
+
+                <!-- Question 3 -->
+                <div class="quiz-question" data-question-id="mcq3" data-correct-answer="a">
+                    <p class="text-lg font-medium mb-3">3. Which level of management is responsible for laying down objectives, broad policies, and preparing strategic plans?</p>
+                    <label class="quiz-option">
+                        <input type="radio" name="mcq3" value="a" class="mr-3">
+                        <span>a) Top Level Management</span>
+                    </label>
+                    <label class="quiz-option">
+                        <input type="radio" name="mcq3" value="b" class="mr-3">
+                        <span>b) Middle Level Management</span>
+                    </label>
+                    <label class="quiz-option">
+                        <input type="radio" name="mcq3" value="c" class="mr-3">
+                        <span>c) Lower Level Management</span>
+                    </label>
+                    <label class="quiz-option">
+                        <input type="radio" name="mcq3" value="d" class="mr-3">
+                        <span>d) Operative Level Management</span>
+                    </label>
+                </div>
+
+                <!-- Question 4 -->
+                <div class="quiz-question" data-question-id="mcq4" data-correct-answer="d">
+                    <p class="text-lg font-medium mb-3">4. Which of the following is listed as a key soft skill for an effective manager?</p>
+                    <label class="quiz-option">
+                        <input type="radio" name="mcq4" value="a" class="mr-3">
+                        <span>a) Accounting</span>
+                    </label>
+                    <label class="quiz-option">
+                        <input type="radio" name="mcq4" value="b" class="mr-3">
+                        <span>b) Software Development</span>
+                    </label>
+                    <label class="quiz-option">
+                        <input type="radio" name="mcq4" value="c" class="mr-3">
+                        <span>c) Budget Creation</span>
+                    </label>
+                    <label class="quiz-option">
+                        <input type="radio" name="mcq4" value="d" class="mr-3">
+                        <span>d) Communication</span>
+                    </label>
+                </div>
+
+                <!-- Question 5 -->
+                <div class="quiz-question" data-question-id="mcq5" data-correct-answer="c">
+                    <p class="text-lg font-medium mb-3">5. The characteristic of management that states it is required in all types of organizations (political, social, cultural, or business) is called:</p>
+                    <label class="quiz-option">
+                        <input type="radio" name="mcq5" value="a" class="mr-3">
+                        <span>a) Goal-Oriented</span>
+                    </label>
+                    <label class="quiz-option">
+                        <input type="radio" name="mcq5" value="b" class="mr-3">
+                        <span>b) Group Activity</span>
+                    </label>
+                    <label class="quiz-option">
+                        <input type="radio" name="mcq5" value="c" class="mr-3">
+                        <span>c) Pervasive</span>
+                    </label>
+                    <label class="quiz-option">
+                        <input type="radio" name="mcq5" value="d" class="mr-3">
+                        <span>d) Continuous</span>
+                    </label>
+                </div>
+
+                <!-- Question 6 -->
+                <div class="quiz-question" data-question-id="mcq6" data-correct-answer="b">
+                    <p class="text-lg font-medium mb-3">6. Which level of management is primarily responsible for interpreting and explaining policies from the top level to the lower level?</p>
+                    <label class="quiz-option">
+                        <input type="radio" name="mcq6" value="a" class="mr-3">
+                        <span>a) Top Level Management</span>
+                    </label>
+                    <label class="quiz-option">
+                        <input type="radio" name="mcq6" value="b" class="mr-3">
+                        <span>b) Middle Level Management</span>
+                    </label>
+                    <label class="quiz-option">
+                        <input type="radio" name="mcq6" value="c" class="mr-3">
+                        <span>c) Lower Level Management</span>
+                    </label>
+                    <label class="quiz-option">
+                        <input type="radio" name="mcq6" value="d" class="mr-3">
+                        <span>d) All levels equally</span>
+                    </label>
+                </div>
+
+                <!-- Question 7 -->
+                <div class="quiz-question" data-question-id="mcq7" data-correct-answer="d">
+                    <p class="text-lg font-medium mb-3">7. Which of the following is NOT listed as an importance of management in the presentation's diagram?</p>
+                    <label class="quiz-option">
+                        <input type="radio" name="mcq7" value="a" class="mr-3">
+                        <span>a) Achieves Organizational Goals</span>
+                    </label>
+                    <label class="quiz-option">
+                        <input type="radio" name="mcq7" value="b" class="mr-3">
+                        <span>b) Promotes Innovation</span>
+                    </label>
+                    <label class="quiz-option">
+                        <input type="radio" name="mcq7" value="c" class="mr-3">
+                        <span>c) Mitigates Risks</span>
+                    </label>
+                    <label class="quiz-option">
+                        <input type="radio" name="mcq7" value="d" class="mr-3">
+                        <span>d) Increases Shareholder Salary</span>
+                    </label>
+                </div>
+
+                <!-- Question 8 -->
+                <div class="quiz-question" data-question-id="mcq8" data-correct-answer="c">
+                    <p class="text-lg font-medium mb-3">8. According to the presentation, what is a key focus for a *leader*?</p>
+                    <label class="quiz-option">
+                        <input type="radio" name="mcq8" value="a" class="mr-3">
+                        <span>a) Day-to-day operations</span>
+                    </label>
+                    <label class="quiz-option">
+                        <input type="radio" name="mcq8" value="b" class="mr-3">
+                        <span>b) Managing resources and budgets</span>
+                    </label>
+                    <label class="quiz-option">
+                        <input type="radio" name="mcq8" value="c" class="mr-3">
+                        <span>c) Driving change and innovation</span>
+                    </label>
+                    <label class="quiz-option">
+                        <input type="radio" name="mcq8" value="d" class="mr-3">
+                        <span>d) Assigning tasks and responsibilities</span>
+                    </label>
+                </div>
+
+                <!-- Question 9 -->
+                <div class="quiz-question" data-question-id="mcq9" data-correct-answer="b">
+                    <p class="text-lg font-medium mb-3">9. According to the presentation, what is a key focus for a *manager*?</p>
+                    <label class="quiz-option">
+                        <input type="radio" name="mcq9" value="a" class="mr-3">
+                        <span>a) Inspiring and motivating others</span>
+                    </label>
+                    <label class="quiz-option">
+                        <input type="radio" name="mcq9" value="b" class="mr-3">
+                        <span>b) Overseeing day-to-day operations</span>
+                    </label>
+                    <label class="quiz-option">
+                        <input type="radio" name="mcq9" value="c" class="mr-3">
+                        <span>c) Setting a clear vision and direction</span>
+                    </label>
+                    <label class="quiz-option">
+                        <input type="radio" name="mcq9" value="d" class="mr-3">
+                        <span>d) Fostering an inclusive culture</span>
+                    </label>
+                </div>
+
+                <!-- Question 10 -->
+                <div class="quiz-question" data-question-id="mcq10" data-correct-answer="a">
+                    <p class="text-lg font-medium mb-3">10. Which of the following is a manager's responsibility related to team development?</p>
+                    <label class="quiz-option">
+                        <input type="radio" name="mcq10" value="a" class="mr-3">
+                        <span>a) Conducting performance reviews</span>
+                    </label>
+                    <label class="quiz-option">
+                        <input type="radio" name="mcq10" value="b" class="mr-3">
+                        <span>b) Managing the department's budget</span>
+                    </label>
+                    <label class="quiz-option">
+                        <input type="radio" name="mcq10" value="c" class="mr-3">
+                        <span>c) Mitigating organizational risks</span>
+                    </label>
+                    <label class="quiz-option">
+                        <input type="radio" name="mcq10" value="d" class="mr-3">
+                        <span>d) Setting broad company policies</span>
+                    </label>
+                </div>
+
+                <!-- Question 11 -->
+                <div class="quiz-question" data-question-id="mcq11" data-correct-answer="c">
+                    <p class="text-lg font-medium mb-3">11. Assigning jobs, guiding workers, and being responsible for the quality of production are tasks for which level?</p>
+                    <label class="quiz-option">
+                        <input type="radio" name="mcq11" value="a" class="mr-3">
+                        <span>a) Top Level Management</span>
+                    </label>
+                    <label class="quiz-option">
+                        <input type="radio" name="mcq11" value="b" class="mr-3">
+                        <span>b) Middle Level Management</span>
+                    </label>
+                    <label class="quiz-option">
+                        <input type="radio" name="mcq11" value="c" class="mr-3">
+                        <span>c) Lower Level Management</span>
+                    </label>
+                    <label class="quiz-option">
+                        <input type="radio" name="mcq11" value="d" class="mr-3">
+                        <span>d) All of the above</span>
+                    </label>
+                </div>
+
+                <!-- Question 12 -->
+                <div class="quiz-question" data-question-id="mcq12" data-correct-answer="a">
+                    <p class="text-lg font-medium mb-3">12. What management function involves setting goals and deciding how to achieve them?</p>
+                    <label class="quiz-option">
+                        <input type="radio" name="mcq12" value="a" class="mr-3">
+                        <span>a) Planning</span>
+                    </label>
+                    <label class="quiz-option">
+                        <input type="radio" name="mcq12" value="b" class="mr-3">
+                        <span>b) Organizing</span>
+                    </label>
+                    <label class="quiz-option">
+                        <input type="radio" name="mcq12" value="c" class="mr-3">
+                        <span>c) Leading</span>
+                    </label>
+                    <label class="quiz-option">
+                        <input type="radio" name="mcq12" value="d" class="mr-3">
+                        <span>d) Controlling</span>
+                    </label>
+                </div>
+
+                <!-- Question 13 -->
+                <div class="quiz-question" data-question-id="mcq13" data-correct-answer="d">
+                    <p class="text-lg font-medium mb-3">13. Which of these is NOT one of the "Top 10 Soft Skills of an Effective Manager" shown in the diagram?</p>
+                    <label class="quiz-option">
+                        <input type="radio" name="mcq13" value="a" class="mr-3">
+                        <span>a) Empathy</span>
+                    </label>
+                    <label class="quiz-option">
+                        <input type="radio" name="mcq13" value="b" class="mr-3">
+                        <span>b) Active Listening</span>
+                    </label>
+                    <label class="quiz-option">
+                        <input type="radio" name="mcq13" value="c" class="mr-3">
+                        <span>c) Adaptability</span>
+                    </label>
+                    <label class="quiz-option">
+                        <input type="radio" name="mcq13" value="d" class="mr-3">
+                        <span>d) Technical Expertise</span>
+                    </label>
+                </div>
+
+                <!-- Question 14 -->
+                <div class="quiz-question" data-question-id="mcq14" data-correct-answer="b">
+                    <p class="text-lg font-medium mb-3">14. The presentation defines management as both an art and a __________.</p>
+                    <label class="quiz-option">
+                        <input type="radio" name="mcq14" value="a" class="mr-3">
+                        <span>a) skill</span>
+                    </label>
+                    <label class="quiz-option">
+                        <input type="radio" name="mcq14" value="b" class="mr-3">
+                        <span>b) science</span>
+                    </label>
+                    <label class="quiz-option">
+                        <input type="radio" name="mcq14" value="c" class="mr-3">
+                        <span>c) process</span>
+                    </label>
+                    <label class="quiz-option">
+                        <input type="radio" name="mcq14" value="d" class="mr-3">
+                        <span>d) function</span>
+                    </label>
+                </div>
+
+                <!-- Question 15 -->
+                <div class="quiz-question" data-question-id="mcq15" data-correct-answer="a">
+                    <p class="text-lg font-medium mb-3">15. A manager's responsibility to mediate workplace issues between employees falls under:</p>
+                    <label class="quiz-option">
+                        <input type="radio" name="mcq15" value="a" class="mr-3">
+                        <span>a) Managing conflicts</span>
+                    </label>
+                    <label class="quiz-option">
+                        <input type="radio" name="mcq15" value="b" class="mr-3">
+                        <span>b) Conducting performance reviews</span>
+                    </label>
+                    <label class="quiz-option">
+                        <input type="radio" name="mcq15" value="c" class="mr-3">
+                        <span>c) Training employees</span>
+                    </label>
+                    <label class="quiz-option">
+                        <input type="radio" name="mcq15" value="d" class="mr-3">
+                        <span>d) Managing the budget</span>
+                    </label>
+                </div>
+
+                <!-- Question 16 -->
+                <div class="quiz-question" data-question-id="mcq16" data-correct-answer="d">
+                    <p class="text-lg font-medium mb-3">16. Which level of management is responsible for maintaining contact with the outside world?</p>
+                    <label class="quiz-option">
+                        <input type="radio" name="mcq16" value="a" class="mr-3">
+                        <span>a) Lower Level Management</span>
+                    </label>
+                    <label class="quiz-option">
+                        <input type="radio" name="mcq16" value="b" class="mr-3">
+                        <span>b) Middle Level Management</span>
+                    </label>
+                    <label class="quiz-option">
+                        <input type="radio" name="mcq16" value="c" class="mr-3">
+                        <span>c) All levels</span>
+                    </label>
+                    <label class="quiz-option">
+                        <input type="radio" name="mcq16" value="d" class="mr-3">
+                        <span>d) Top Level Management</span>
+                    </label>
+                </div>
+
+                <!-- Question 17 -->
+                <div class="quiz-question" data-question-id="mcq17" data-correct-answer="c">
+                    <p class="text-lg font-medium mb-3">17. The process of a manager helping employees learn new skills and offering professional development is called:</p>
+                    <label class="quiz-option">
+                        <input type="radio" name="mcq17" value="a" class="mr-3">
+                        <span>a) Leading</span>
+                    </label>
+                    <label class="quiz-option">
+                        <input type="radio" name="mcq17" value="b" class="mr-3">
+                        <span>b) Hiring</span>
+                    </label>
+                    <label class="quiz-option">
+                        <input type="radio" name="mcq17" value="c" class="mr-3">
+                        <span>c) Training</span>
+                    </label>
+                    <label class="quiz-option">
+                        <input type="radio" name="mcq17" value="d" class="mr-3">
+                        <span>d) Delegating</span>
+                    </label>
+                </div>
+
+                <!-- Question 18 -->
+                <div class="quiz-question" data-question-id="mcq18" data-correct-answer="b">
+                    <p class="text-lg font-medium mb-3">18. The characteristic that management is an "ongoing process" and involves "continuous handling of problems" means it is:</p>
+                    <label class="quiz-option">
+                        <input type="radio" name="mcq18" value="a" class="mr-3">
+                        <span>a) Pervasive</span>
+                    </label>
+                    <label class="quiz-option">
+                        <input type="radio" name="mcq18" value="b" class="mr-3">
+                        <span>b) Continuous</span>
+                    </label>
+                    <label class="quiz-option">
+                        <input type="radio" name="mcq18" value="c" class="mr-3">
+                        <span>c) Goal-Oriented</span>
+                    </label>
+                    <label class="quiz-option">
+                        <input type="radio" name="mcq18" value="d" class="mr-3">
+                        <span>d) A Group Activity</span>
+                    </label>
+                </div>
+
+                <!-- Question 19 -->
+                <div class="quiz-question" data-question-id="mcq19" data-correct-answer="d">
+                    <p class="text-lg font-medium mb-3">19. Which soft skill involves the ability to assign tasks to specific employees?</p>
+                    <label class="quiz-option">
+                        <input type="radio" name="mcq19" value="a" class="mr-3">
+                        <span>a) Critical Thinking</span>
+                    </label>
+                    <label class="quiz-option">
+                        <input type="radio" name="mcq19" value="b" class="mr-3">
+                        <span>b) Problem-Solving</span>
+                    </label>
+                    <label class="quiz-option">
+                        <input type="radio" name="mcq19" value="c" class="mr-3">
+                        <span>c) Time Management</span>
+                    </label>
+                    <label class="quiz-option">
+                        <input type="radio" name="mcq19" value="d" class="mr-3">
+                        <span>d) Delegation</span>
+                    </label>
+                </div>
+
+                <!-- Question 20 -->
+                <div class="quiz-question" data-question-id="mcq20" data-correct-answer="a">
+                    <p class="text-lg font-medium mb-3">20. According to the presentation, management integrates human, physical, and __________ resources.</p>
+                    <label class="quiz-option">
+                        <input type="radio" name="mcq20" value="a" class="mr-3">
+                        <span>a) Financial</span>
+                    </label>
+                    <label class="quiz-option">
+                        <input type="radio" name="mcq20" value="b" class="mr-3">
+                        <span>b) Natural</span>
+                    </label>
+                    <label class="quiz-option">
+                        <input type="radio" name="mcq20" value="c" class="mr-3">
+                        <span>c) Technical</span>
+                    </label>
+                    <label class="quiz-option">
+                        <input type="radio" name="mcq20" value="d" class="mr-3">
+                        <span>d) Cultural</span>
+                    </label>
+                </div>
+
+                <!-- Question 21 -->
+                <div class="quiz-question" data-question-id="mcq21" data-correct-answer="a">
+                    <p class="text-lg font-medium mb-3">21. Management is a purposeful activity that helps use human & physical resources to...</p>
+                    <label class="quiz-option">
+                        <input type="radio" name="mcq21" value="a" class="mr-3">
+                        <span>a) Fulfill predetermined goals</span>
+                    </label>
+                    <label class="quiz-option">
+                        <input type="radio" name="mcq21" value="b" class="mr-3">
+                        <span>b) Maximize individual efforts</span>
+                    </label>
+                    <label class="quiz-option">
+                        <input type="radio" name="mcq21" value="c" class="mr-3">
+                        <span>c) Reduce financial costs only</span>
+                    </label>
+                    <label class="quiz-option">
+                        <input type="radio" name="mcq21" value="d" class="mr-3">
+                        <span>d) Integrate non-human resources</span>
+                    </label>
+                </div>
+
+                <!-- Question 22 -->
+                <div class="quiz-question" data-question-id="mcq22" data-correct-answer="b">
+                    <p class="text-lg font-medium mb-3">22. Management is more concerned with __________ than individual efforts.</p>
+                    <label class="quiz-option">
+                        <input type="radio" name="mcq22" value="a" class="mr-3">
+                        <span>a) Financial assets</span>
+                    </label>
+                    <label class="quiz-option">
+                        <input type="radio" name="mcq22" value="b" class="mr-3">
+                        <span>b) Group efforts</span>
+                    </label>
+                    <label class="quiz-option">
+                        <input type="radio" name="mcq22" value="c" class="mr-3">
+                        <span>c) Non-human resources</span>
+                    </label>
+                    <label class="quiz-option">
+                        <input type="radio" name="mcq22" value="d" class="mr-3">
+                        <span>d) Political organizations</span>
+                    </label>
+                </div>
+
+                <!-- Question 23 -->
+                <div class="quiz-question" data-question-id="mcq23" data-correct-answer="b">
+                    <p class="text-lg font-medium mb-3">23. In the "Levels of Management" diagram, authority flows:</p>
+                    <label class="quiz-option">
+                        <input type="radio" name="mcq23" value="a" class="mr-3">
+                        <span>a) Upwards, from lower to top level</span>
+                    </label>
+                    <label class="quiz-option">
+                        <input type="radio" name="mcq23" value="b" class="mr-3">
+                        <span>b) Downwards, from top to lower level</span>
+                    </label>
+                    <label class="quiz-option">
+                        <input type="radio" name="mcq23" value="c" class="mr-3">
+                        <span>c) Horizontally, across middle management</span>
+                    </label>
+                    <label class="quiz-option">
+                        <input type="radio" name="mcq23" value="d" class="mr-3">
+                        <span>d) Both up and down</span>
+                    </label>
+                </div>
+
+                <!-- Question 24 -->
+                <div class="quiz-question" data-question-id="mcq24" data-correct-answer="a">
+                    <p class="text-lg font-medium mb-3">24. In the "Levels of Management" diagram, accountability flows:</p>
+                    <label class="quiz-option">
+                        <input type="radio" name="mcq24" value="a" class="mr-3">
+                        <span>a) Upwards, from lower to top level</span>
+                    </label>
+                    <label class="quiz-option">
+                        <input type="radio" name="mcq24" value="b" class="mr-3">
+                        <span>b) Downwards, from top to lower level</span>
+                    </label>
+                    <label class="quiz-option">
+                        <input type="radio" name="mcq24" value="c" class="mr-3">
+                        <span>c) Only within the top level</span>
+                    </label>
+                    <label class="quiz-option">
+                        <input type="radio" name="mcq24" value="d" class="mr-3">
+                        <span>d) From middle level to lower level</span>
+                    </label>
+                </div>
+
+                <!-- Question 25 -->
+                <div class="quiz-question" data-question-id="mcq25" data-correct-answer="c">
+                    <p class="text-lg font-medium mb-3">25. Which level of management consists of the board of directors and chief executive?</p>
+                    <label class="quiz-option">
+                        <input type="radio" name="mcq25" value="a" class="mr-3">
+                        <span>a) Lower Level</span>
+                    </label>
+                    <label class="quiz-option">
+                        <input type="radio" name="mcq25" value="b" class="mr-3">
+                        <span>b) Middle Level</span>
+                    </label>
+                    <label class="quiz-option">
+                        <input type="radio" name="mcq25" value="c" class="mr-3">
+                        <span>c) Top Level</span>
+                    </label>
+                    <label class="quiz-option">
+                        <input type="radio" name="mcq25" value="d" class="mr-3">
+                        <span>d) Supervisory Level</span>
+                    </label>
+                </div>
+
+                <!-- Question 26 -->
+                <div class="quiz-question" data-question-id="mcq26" data-correct-answer="b">
+                    <p class="text-lg font-medium mb-3">26. Branch managers and departmental managers constitute which level of management?</p>
+                    <label class="quiz-option">
+                        <input type="radio" name="mcq26" value="a" class="mr-3">
+                        <span>a) Lower Level</span>
+                    </label>
+                    <label class="quiz-option">
+                        <input type="radio" name="mcq26" value="b" class="mr-3">
+                        <span>b) Middle Level</span>
+                    </label>
+                    <label class="quiz-option">
+                        <input type="radio" name="mcq26" value="c" class="mr-3">
+                        <span>c) Top Level</span>
+                    </label>
+                    <label class="quiz-option">
+                        <input type="radio" name="mcq26" value="d" class="mr-3">
+                        <span>d) Operative Level</span>
+                    </label>
+                </div>
+
+                <!-- Question 27 -->
+                <div class="quiz-question" data-question-id="mcq27" data-correct-answer="a">
+                    <p class="text-lg font-medium mb-3">27. Supervisors, foremen, and section officers are part of which level of management?</p>
+                    <label class="quiz-option">
+                        <input type="radio" name="mcq27" value="a" class="mr-3">
+                        <span>a) Lower Level</span>
+                    </label>
+                    <label class="quiz-option">
+                        <input type="radio" name="mcq27" value="b" class="mr-3">
+                        <span>b) Middle Level</span>
+                    </label>
+                    <label class="quiz-option">
+                        <input type="radio" name="mcq27" value="c" class="mr-3">
+                        <span>c) Top Level</span>
+                    </label>
+                    <label class="quiz-option">
+                        <input type="radio" name="mcq27" value="d" class="mr-3">
+                        <span>d) Senior Management</span>
+                    </label>
+                </div>
+
+                <!-- Question 28 -->
+                <div class="quiz-question" data-question-id="mcq28" data-correct-answer="c">
+                    <p class="text-lg font-medium mb-3">28. A key difference between a manager and a leader is that a manager focuses on __________, while a leader focuses on driving change.</p>
+                    <label class="quiz-option">
+                        <input type="radio" name="mcq28" value="a" class="mr-3">
+                        <span>a) Inspiring others</span>
+                    </label>
+                    <label class="quiz-option">
+                        <input type="radio" name="mcq28" value="b" class="mr-3">
+                        <span>b) Setting a clear vision</span>
+                    </label>
+                    <label class="quiz-option">
+                        <input type="radio" name="mcq28" value="c" class="mr-3">
+                        <span>c) Day-to-day operations</span>
+                    </label>
+                    <label class="quiz-option">
+                        <input type="radio" name="mcq28" value="d" class="mr-3">
+                        <span>d) Fostering a positive culture</span>
+                    </label>
+                </div>
+
+                <!-- Question 29 -->
+                <div class="quiz-question" data-question-id="mcq29" data-correct-answer="d">
+                    <p class="text-lg font-medium mb-3">29. Managers often work with which department to hire new employees?</p>
+                    <label class="quiz-option">
+                        <input type="radio" name="mcq29" value="a" class="mr-3">
+                        <span>a) Finance</span>
+                    </label>
+                    <label class="quiz-option">
+                        <input type="radio" name="mcq29" value="b" class="mr-3">
+                        <span>b) Marketing</span>
+                    </label>
+                    <label class="quiz-option">
+                        <input type="radio" name="mcq29" value="c" class="mr-3">
+                        <span>c) Legal</span>
+                    </label>
+                    <label class="quiz-option">
+                        <input type="radio" name="mcq29" value="d" class="mr-3">
+                        <span>d) Human Resources</span>
+                    </label>
+                </div>
+
+                <!-- Question 30 -->
+                <div class="quiz-question" data-question-id="mcq30" data-correct-answer="c">
+                    <p class="text-lg font-medium mb-3">30. Which of these skills involves understanding and sharing the feelings of another?</p>
+                    <label class="quiz-option">
+                        <input type="radio" name="mcq30" value="a" class="mr-3">
+                        <span>a) Critical Thinking</span>
+                    </label>
+                    <label class="quiz-option">
+                        <input type="radio" name="mcq30" value="b" class="mr-3">
+                        <span>b) Delegation</span>
+                    </label>
+                    <label class="quiz-option">
+                        <input type="radio" name="mcq30" value="c" class="mr-3">
+                        <span>c) Empathy</span>
+                    </label>
+                    <label class="quiz-option">
+                        <input type="radio" name="mcq30" value="d" class="mr-3">
+                        <span>d) Adaptability</span>
+                    </label>
+                </div>
+
+                <!-- Question 31 -->
+                <div class="quiz-question" data-question-id="mcq31" data-correct-answer="b">
+                    <p class="text-lg font-medium mb-3">31. What is one of the main functions of management mentioned in the first definition?</p>
+                    <label class="quiz-option">
+                        <input type="radio" name="mcq31" value="a" class="mr-3">
+                        <span>a) Marketing</span>
+                    </label>
+                    <label class="quiz-option">
+                        <input type="radio" name="mcq31" value="b" class="mr-3">
+                        <span>b) Forecasting</span>
+                    </label>
+                    <label class="quiz-option">
+                        <input type="radio" name="mcq31" value="c" class="mr-3">
+                        <span>c) Engineering</span>
+                    </label>
+                    <label class="quiz-option">
+                        <input type="radio" name="mcq31" value="d" class="mr-3">
+                        <span>d) Legal</span>
+                    </label>
+                </div>
+
+                <!-- Question 32 -->
+                <div class="quiz-question" data-question-id="mcq32" data-correct-answer="c">
+                    <p class="text-lg font-medium mb-3">32. Management is described as the skill of getting things done through...</p>
+                    <label class="quiz-option">
+                        <input type="radio" name="mcq32" value="a" class="mr-3">
+                        <span>a) technology</span>
+                    </label>
+                    <label class="quiz-option">
+                        <input type="radio" name="mcq32" value="b" class="mr-3">
+                        <span>b) oneself</span>
+                    </label>
+                    <label class="quiz-option">
+                        <input type="radio" name="mcq32" value="c" class="mr-3">
+                        <span>c) other people</span>
+                    </label>
+                    <label class="quiz-option">
+                        <input type="radio" name="mcq32" value="d" class="mr-3">
+                        <span>d) automation</span>
+                    </label>
+                </div>
+
+                <!-- Question 33 -->
+                <div class="quiz-question" data-question-id="mcq33" data-correct-answer="c">
+                    <p class="text-lg font-medium mb-3">33. Why is management considered an art?</p>
+                    <label class="quiz-option">
+                        <input type="radio" name="mcq33" value="a" class="mr-3">
+                        <span>a) It relies on principles and theories</span>
+                    </label>
+                    <label class="quiz-option">
+                        <input type="radio" name="mcq33" value="b" class="mr-3">
+                        <span>b) It requires systematic methods</span>
+                    </label>
+                    <label class="quiz-option">
+                        <input type="radio" name="mcq33" value="c" class="mr-3">
+                        <span>c) It requires creativity and interpersonal skills</span>
+                    </label>
+                    <label class="quiz-option">
+                        <input type="radio" name="mcq33" value="d" class="mr-3">
+                        <span>d) It is focused on cost reduction</span>
+                    </label>
+                </div>
+
+                <!-- Question 34 -->
+                <div class="quiz-question" data-question-id="mcq34" data-correct-answer="b">
+                    <p class="text-lg font-medium mb-3">34. Why is management considered a science?</p>
+                    <label class="quiz-option">
+                        <input type="radio" name="mcq34" value="a" class="mr-3">
+                        <span>a) It requires intuition</span>
+                    </label>
+                    <label class="quiz-option">
+                        <input type="radio" name="mcq34" value="b" class="mr-3">
+                        <span>b) It relies on principles, theories, and systematic methods</span>
+                    </label>
+                    <label class="quiz-option">
+                        <input type="radio" name="mcq34" value="c" class="mr-3">
+                        <span>c) It is a group activity</span>
+                    </label>
+                    <label class="quiz-option">
+                        <input type="radio" name="mcq34" value="d" class="mr-3">
+                        <span>d) It requires interpersonal skills</span>
+                    </label>
+                </div>
+
+                <!-- Question 35 -->
+                <div class="quiz-question" data-question-id="mcq35" data-correct-answer="b">
+                    <p class="text-lg font-medium mb-3">35. An example of effectiveness is:</p>
+                    <label class="quiz-option">
+                        <input type="radio" name="mcq35" value="a" class="mr-3">
+                        <span>a) Producing a product with minimal cost</span>
+                    </label>
+                    <label class="quiz-option">
+                        <input type="radio" name="mcq35" value="b" class="mr-3">
+                        <span>b) Launching a new product that meets customer needs</span>
+                    </label>
+                    <label class="quiz-option">
+                        <input type="radio" name="mcq35" value="c" class="mr-3">
+                        <span>c) Using the least amount of time</span>
+                    </label>
+                    <label class="quiz-option">
+                        <input type="radio" name="mcq35" value="d" class="mr-3">
+                        <span>d) Reducing waste in production</span>
+                    </label>
+                </div>
+
+                <!-- Question 36 -->
+                <div class="quiz-question" data-question-id="mcq36" data-correct-answer="b">
+                    <p class="text-lg font-medium mb-3">36. An example of efficiency is:</p>
+                    <label class="quiz-option">
+                        <input type="radio" name="mcq36" value="a" class="mr-3">
+                        <span>a) Achieving organizational goals</span>
+                    </label>
+                    <label class="quiz-option">
+                        <input type="radio" name="mcq36" value="b" class="mr-3">
+                        <span>b) Producing a product with minimal cost and waste</span>
+                    </label>
+                    <label class="quiz-option">
+                        <input type="radio" name="mcq36" value="c" class="mr-3">
+                        <span>c) Launching a popular product</span>
+                    </label>
+                    <label class="quiz-option">
+                        <input type="radio" name="mcq36" value="d" class="mr-3">
+                        <span>d) Producing the desired outcomes</span>
+                    </label>
+                </div>
+
+                <!-- Question 37 -->
+                <div class="quiz-question" data-question-id="mcq37" data-correct-answer="b">
+                    <p class="text-lg font-medium mb-3">37. The success of any management activity is assessed by its...</p>
+                    <label class="quiz-option">
+                        <input type="radio" name="mcq37" value="a" class="mr-3">
+                        <span>a) use of machines</span>
+                    </label>
+                    <label class="quiz-option">
+                        <input type="radio" name="mcq37" value="b" class="mr-3">
+                        <span>b) achievement of predetermined goals</span>
+                    </label>
+                    <label class="quiz-option">
+                        <input type="radio" name="mcq37" value="c" class="mr-3">
+                        <span>c) integration of human efforts</span>
+                    </label>
+                    <label class="quiz-option">
+                        <input type="radio" name="mcq37" value="d" class="mr-3">
+                        <span>d) handling of problems</span>
+                    </label>
+                </div>
+
+                <!-- Question 38 -->
+                <div class="quiz-question" data-question-id="mcq38" data-correct-answer="d">
+                    <p class="text-lg font-medium mb-3">38. Which management characteristic means it's an "ongoing process"?</p>
+                    <label class="quiz-option">
+                        <input type="radio" name="mcq38" value="a" class="mr-3">
+                        <span>a) Goal-Oriented</span>
+                    </label>
+                    <label class="quiz-option">
+                        <input type="radio" name="mcq38" value="b" class="mr-3">
+                        <span>b) Pervasive</span>
+                    </label>
+                    <label class="quiz-option">
+                        <input type="radio" name="mcq38" value="c" class="mr-3">
+                        <span>c) Group Activity</span>
+                    </label>
+                    <label class="quiz-option">
+                        <input type="radio" name="mcq38" value="d" class="mr-3">
+                        <span>d) Continuous</span>
+                    </label>
+                </div>
+
+                <!-- Question 39 -->
+                <div class="quiz-question" data-question-id="mcq39" data-correct-answer="c">
+                    <p class="text-lg font-medium mb-3">39. Which characteristic states management is concerned with "groups" rather than "individuals"?</p>
+                    <label class="quiz-option">
+                        <input type="radio" name="mcq39" value="a" class="mr-3">
+                        <span>a) Goal-Oriented</span>
+                    </label>
+                    <label class="quiz-option">
+                        <input type="radio" name="mcq39" value="b" class="mr-3">
+                        <span>b) Pervasive</span>
+                    </label>
+                    <label class="quiz-option">
+                        <input type="radio" name="mcq39" value="c" class="mr-3">
+                        <span>c) Group Activity</span>
+                    </label>
+                    <label class="quiz-option">
+                        <input type="radio" name="mcq39" value="d" class="mr-3">
+                        <span>d) Continuous</span>
+                    </label>
+                </div>
+
+                <!-- Question 40 -->
+                <div class="quiz-question" data-question-id="mcq40" data-correct-answer="c">
+                    <p class="text-lg font-medium mb-3">40. Top management is the ultimate source of...</p>
+                    <label class="quiz-option">
+                        <input type="radio" name="mcq40" value="a" class="mr-3">
+                        <span>a) production quality</span>
+                    </label>
+                    <label class="quiz-option">
+                        <input type="radio" name="mcq40" value="b" class="mr-3">
+                        <span>b) day-to-day guidance</span>
+                    </label>
+                    <label class="quiz-option">
+                        <input type="radio" name="mcq40" value="c" class="mr-3">
+                        <span>c) authority</span>
+                    </label>
+                    <label class="quiz-option">
+                        <input type="radio" name="mcq40" value="d" class="mr-3">
+                        <span>d) worker training</span>
+                    </label>
+                </div>
+            </section>
+
+            <!-- Section 2: True/False Questions -->
+            <section class="space-y-6">
+                <h2 class="text-2xl sm:text-3xl font-semibold border-b border-gray-200 pb-3 text-gray-900">Part 2: True or False</h2>
+
+                <!-- Question 1 -->
+                <div class="quiz-question" data-question-id="tf1" data-correct-answer="false">
+                    <p class="text-lg font-medium mb-3">1. Management is considered only an art because it requires creativity.</p>
+                    <label class="quiz-option">
+                        <input type="radio" name="tf1" value="true" class="mr-3">
+                        <span>True</span>
+                    </label>
+                    <label class="quiz-option">
+                        <input type="radio" name="tf1" value="false" class="mr-3">
+                        <span>False</span>
+                    </label>
+                </div>
+
+                <!-- Question 2 -->
+                <div class="quiz-question" data-question-id="tf2" data-correct-answer="true">
+                    <p class="text-lg font-medium mb-3">2. Lower-level management is in direct contact with the workers and guides their day-to-day activities.</p>
+                    <label class="quiz-option">
+                        <input type="radio" name="tf2" value="true" class="mr-3">
+                        <span>True</span>
+                    </label>
+                    <label class="quiz-option">
+                        <input type="radio" name="tf2" value="false" class="mr-3">
+                        <span>False</span>
+                    </label>
+                </div>
+
+                <!-- Question 3 -->
+                <div class="quiz-question" data-question-id="tf3" data-correct-answer="false">
+                    <p class="text-lg font-medium mb-3">3. "Efficiency" means doing the right things, while "Effectiveness" means doing things right.</p>
+                    <label class="quiz-option">
+                        <input type="radio" name="tf3" value="true" class="mr-3">
+                        <span>True</span>
+                    </label>
+                    <label class="quiz-option">
+                        <input type="radio" name="tf3" value="false" class="mr-3">
+                        <span>False</span>
+                    </label>
+                </div>
+
+                <!-- Question 4 -->
+                <div class="quiz-question" data-question-id="tf4" data-correct-answer="false">
+                    <p class="text-lg font-medium mb-3">4. Management is primarily concerned with individual efforts rather than group efforts.</p>
+                    <label class="quiz-option">
+                        <input type="radio" name="tf4" value="true" class="mr-3">
+                        <span>True</span>
+                    </label>
+                    <label class="quiz-option">
+                        <input type="radio" name="tf4" value="false" class="mr-3">
+                        <span>False</span>
+                    </label>
+                </div>
+
+                <!-- Question 5 -->
+                <div class="quiz-question" data-question-id="tf5" data-correct-answer="true">
+                    <p class="text-lg font-medium mb-3">5. Managers are frequently involved in hiring new employees for their team.</p>
+                    <label class="quiz-option">
+                        <input type="radio" name="tf5" value="true" class="mr-3">
+                        <span>True</span>
+                    </label>
+                    <label class="quiz-option">
+                        <input type="radio" name="tf5" value="false" class="mr-3">
+                        <span>False</span>
+                    </label>
+                </div>
+
+                <!-- Question 6 -->
+                <div class="quiz-question" data-question-id="tf6" data-correct-answer="false">
+                    <p class="text-lg font-medium mb-3">6. Management is a one-time process that ends once a goal is achieved.</p>
+                    <label class="quiz-option">
+                        <input type="radio" name="tf6" value="true" class="mr-3">
+                        <span>True</span>
+                    </label>
+                    <label class="quiz-option">
+                        <input type="radio" name="tf6" value="false" class="mr-3">
+                        <span>False</span>
+                    </label>
+                </div>
+
+                <!-- Question 7 -->
+                <div class="quiz-question" data-question-id="tf7" data-correct-answer="true">
+                    <p class="text-lg font-medium mb-3">7. Managing conflicts between team members is a key responsibility of a manager.</p>
+                    <label class="quiz-option">
+                        <input type="radio" name="tf7" value="true" class="mr-3">
+                        <span>True</span>
+                    </label>
+                    <label class="quiz-option">
+                        <input type="radio" name="tf7" value="false" class="mr-3">
+                        <span>False</span>
+                    </label>
+                </div>
+
+                <!-- Question 8 -->
+                <div class="quiz-question" data-question-id="tf8" data-correct-answer="true">
+                    <p class="text-lg font-medium mb-3">8. "Delegation" is listed as one of the top 10 soft skills of an effective manager.</p>
+                    <label class="quiz-option">
+                        <input type="radio" name="tf8" value="true" class="mr-3">
+                        <span>True</span>
+                    </label>
+                    <label class="quiz-option">
+                        <input type="radio" name="tf8" value="false" class="mr-3">
+                        <span>False</span>
+                    </label>
+                </div>
+
+                <!-- Question 9 -->
+                <div class="quiz-question" data-question-id="tf9" data-correct-answer="false">
+                    <p class="text-lg font-medium mb-3">9. Top-level managers devote more time to organizational and directional functions than planning and coordinating.</p>
+                    <label class="quiz-option">
+                        <input type="radio" name="tf9" value="true" class="mr-3">
+                        <span>True</span>
+                    </label>
+                    <label class="quiz-option">
+                        <input type="radio" name="tf9" value="false" class="mr-3">
+                        <span>False</span>
+                    </label>
+                </div>
+
+                <!-- Question 10 -->
+                <div class="quiz-question" data-question-id="tf10" data-correct-answer="true">
+                    <p class="text-lg font-medium mb-3">10. Middle-level managers are responsible for evaluating the performance of junior managers.</p>
+                    <label class="quiz-option">
+                        <input type="radio" name="tf10" value="true" class="mr-3">
+                        <span>True</span>
+                    </label>
+                    <label class="quiz-option">
+                        <input type="radio" name="tf10" value="false" class="mr-3">
+                        <span>False</span>
+                    </label>
+                </div>
+
+                <!-- Question 11 -->
+                <div class="quiz-question" data-question-id="tf11" data-correct-answer="true">
+                    <p class="text-lg font-medium mb-3">11. Management integrates human, physical, and financial resources.</p>
+                    <label class="quiz-option">
+                        <input type="radio" name="tf11" value="true" class="mr-3">
+                        <span>True</span>
+                    </label>
+                    <label class="quiz-option">
+                        <input type="radio" name="tf11" value="false" class="mr-3">
+                        <span>False</span>
+                    </label>
+                </div>
+
+                <!-- Question 12 -->
+                <div class="quiz-question" data-question-id="tf12" data-correct-answer="false">
+                    <p class="text-lg font-medium mb-3">12. Leaders are primarily focused on day-to-day operations and managing resources.</p>
+                    <label class="quiz-option">
+                        <input type="radio" name="tf12" value="true" class="mr-3">
+                        <span>True</span>
+                    </label>
+                    <label class="quiz-option">
+                        <input type="radio" name="tf12" value="false" class="mr-3">
+                        <span>False</span>
+                    </label>
+                </div>
+
+                <!-- Question 13 -->
+                <div class="quiz-question" data-question-id="tf13" data-correct-answer="true">
+                    <p class="text-lg font-medium mb-3">13. Managers often act as mentors to their employees.</p>
+                    <label class="quiz-option">
+                        <input type="radio" name="tf13" value="true" class="mr-3">
+                        <span>True</span>
+                    </label>
+                    <label class="quiz-option">
+                        <input type="radio" name="tf13" value="false" class="mr-3">
+                        <span>False</span>
+                    </label>
+                </div>
+
+                <!-- Question 14 -->
+                <div class="quiz-question" data-question-id="tf14" data-correct-answer="true">
+                    <p class="text-lg font-medium mb-3">14. Lower-level management is also known as the supervisory or operative level.</p>
+                    <label class="quiz-option">
+                        <input type="radio" name="tf14" value="true" class="mr-3">
+                        <span>True</span>
+                    </label>
+                    <label class="quiz-option">
+                        <input type="radio" name="tf14" value="false" class="mr-3">
+                        <span>False</span>
+                    </label>
+                </div>
+
+                <!-- Question 15 -->
+                <div class="quiz-question" data-question-id="tf15" data-correct-answer="false">
+                    <p class="text-lg font-medium mb-3">15. Middle-level managers are responsible for appointing top-level executives.</p>
+                    <label class="quiz-option">
+                        <input type="radio" name="tf15" value="true" class="mr-3">
+                        <span>True</span>
+                    </label>
+                    <label class="quiz-option">
+                        <input type="radio" name="tf15" value="false" class="mr-3">
+                        <span>False</span>
+                    </label>
+                </div>
+
+                <!-- Question 16 -->
+                <div class="quiz-question" data-question-id="tf16" data-correct-answer="true">
+                    <p class="text-lg font-medium mb-3">16. Top-level management is responsible to the shareholders for the enterprise's performance.</p>
+                    <label class="quiz-option">
+                        <input type="radio" name="tf16" value="true" class="mr-3">
+                        <span>True</span>
+                    </label>
+                    <label class="quiz-option">
+                        <input type="radio" name="tf16" value="false" class="mr-3">
+                        <span>False</span>
+                    </label>
+                </div>
+
+                <!-- Question 17 -->
+                <div class="quiz-question" data-question-id="tf17" data-correct-answer="true">
+                    <p class="text-lg font-medium mb-3">17. "Empathy" is listed as one of the top 10 soft skills for a manager.</p>
+                    <label class="quiz-option">
+                        <input type="radio" name="tf17" value="true" class="mr-3">
+                        <span>True</span>
+                    </label>
+                    <label class="quiz-option">
+                        <input type="radio" name="tf17" value="false" class="mr-3">
+                        <span>False</span>
+                    </label>
+                </div>
+
+                <!-- Question 18 -->
+                <div class="quiz-question" data-question-id="tf18" data-correct-answer="false">
+                    <p class="text-lg font-medium mb-3">18. Managers are not typically responsible for their department's budget.</p>
+                    <label class="quiz-option">
+                        <input type="radio" name="tf18" value="true" class="mr-3">
+                        <span>True</span>
+                    </label>
+                    <label class="quiz-option">
+                        <input type="radio" name="tf18" value="false" class="mr-3">
+                        <span>False</span>
+                    </label>
+                </div>
+
+                <!-- Question 19 -->
+                <div class="quiz-question" data-question-id="tf19" data-correct-answer="true">
+                    <p class="text-lg font-medium mb-3">19. "Promotes Innovation" is listed as one of the importances of management.</p>
+                    <label class="quiz-option">
+                        <input type="radio" name="tf19" value="true" class="mr-3">
+                        <span>True</span>
+                    </label>
+                    <label class="quiz-option">
+                        <input type="radio" name="tf19" value="false" class="mr-3">
+                        <span>False</span>
+                    </label>
+                </div>
+
+                <!-- Question 20 -->
+                <div class="quiz-question" data-question-id="tf20" data-correct-answer="false">
+                    <p class="text-lg font-medium mb-3">20. The primary goal of management is to work individually to achieve personal objectives.</p>
+                    <label class="quiz-option">
+                        <input type="radio" name="tf20" value="true" class="mr-3">
+                        <span>True</span>
+                    </Iabel>
+                    <label class="quiz-option">
+                        <input type="radio" name="tf20" value="false" class="mr-3">
+                        <span>False</span>
+                    </Iabel>
+                </div>
+
+                <!-- Question 21 -->
+                <div class="quiz-question" data-question-id="tf21" data-correct-answer="true">
+                    <p class="text-lg font-medium mb-3">21. One definition of management is "the art of knowing what you want to do in the best and cheapest way."</p>
+                    <label class="quiz-option">
+                        <input type="radio" name="tf21" value="true" class="mr-3">
+                        <span>True</span>
+                    </label>
+                    <label class="quiz-option">
+                        <input type="radio" name="tf21" value="false" class="mr-3">
+                        <span>False</span>
+                    </label>
+                </div>
+
+                <!-- Question 22 -->
+                <div class="quiz-question" data-question-id="tf22" data-correct-answer="true">
+                    <p class="text-lg font-medium mb-3">22. The success of management is assessed by its achievement of predetermined goals.</p>
+                    <label class="quiz-option">
+                        <input type="radio" name="tf22" value="true" class="mr-3">
+                        <span>True</span>
+                    </label>
+                    <label class="quiz-option">
+                        <input type="radio" name="tf22" value="false" class="mr-3">
+                        <span>False</span>
+                    </label>
+                </div>
+
+                <!-- Question 23 -->
+                <div class="quiz-question" data-question-id="tf23" data-correct-answer="false">
+                    <p class="text-lg font-medium mb-3">23. Management is only required in business organizations, not political or social ones.</p>
+                    <label class="quiz-option">
+                        <input type="radio" name="tf23" value="true" class="mr-3">
+                        <span>True</span>
+                    </label>
+                    <label class="quiz-option">
+                        <input type="radio" name="tf23" value="false" class="mr-3">
+                        <span>False</span>
+                    </label>
+                </div>
+
+                <!-- Question 24 -->
+                <div class="quiz-question" data-question-id="tf24" data-correct-answer="false">
+                    <p class="text-lg font-medium mb-3">24. Top management is directly responsible for preparing the budgets for all individual departments.</p>
+                    <label class="quiz-option">
+                        <input type="radio" name="tf24" value="true" class="mr-3">
+                        <span>True</span>
+                    </label>
+                    <label class="quiz-option">
+                        <input type="radio" name="tf24" value="false" class="mr-3">
+                        <span>False</span>
+                    </label>
+                </div>
+
+                <!-- Question 25 -->
+                <div class="quiz-question" data-question-id="tf25" data-correct-answer="true">
+                    <p class="text-lg font-medium mb-3">25. Middle management is responsible for executing plans in accordance with top management's policies.</p>
+                    <label class="quiz-option">
+                        <input type="radio" name="tf25" value="true" class="mr-3">
+                        <span>True</span>
+                    </label>
+                    <label class="quiz-option">
+                        <input type="radio" name="tf25" value="false" class="mr-3">
+                        <span>False</span>
+                    </label>
+                </div>
+
+                <!-- Question 26 -->
+                <div class="quiz-question" data-question-id="tf26" data-correct-answer="true">
+                    <p class="text-lg font-medium mb-3">26. Lower-level managers are known as the "image builders" of the enterprise because they are in direct contact with workers.</p>
+                    <label class="quiz-option">
+                        <input type="radio" name="tf26" value="true" class="mr-3">
+                        <span>True</span>
+                    </label>
+                    <label class="quiz-option">
+                        <input type="radio" name="tf26" value="false" class="mr-3">
+                        <span>False</span>
+                    </label>
+                </div>
+
+                <!-- Question 27 -->
+                <div class="quiz-question" data-question-id="tf27" data-correct-answer="true">
+                    <p class="text-lg font-medium mb-3">27. Lower-level management helps to solve the grievances of the workers.</p>
+                    <label class="quiz-option">
+                        <input type="radio" name="tf27" value="true" class="mr-3">
+                        <span>True</span>
+                    </label>
+                    <label class="quiz-option">
+                        <input type="radio" name="tf27" value="false" class="mr-3">
+                        <span>False</span>
+                    </label>
+                </div>
+
+                <!-- Question 28 -->
+                <div class="quiz-question" data-question-id="tf28" data-correct-answer="false">
+                    <p class="text-lg font-medium mb-3">28. A leader is an individual who is primarily responsible for supervising day-to-day activities.</p>
+                    <label class="quiz-option">
+                        <input type="radio" name="tf28" value="true" class="mr-3">
+                        <span>True</span>
+                    </label>
+                    <label class="quiz-option">
+                        <input type="radio" name="tf28" value="false" class="mr-3">
+                        <span>False</span>
+                    </label>
+                </div>
+
+                <!-- Question 29 -->
+                <div class="quiz-question" data-question-id="tf29" data-correct-answer="false">
+                    <p class="text-lg font-medium mb-3">29. Conducting performance reviews is a minor task for managers and rarely occurs.</p>
+                    <label class="quiz-option">
+                        <input type="radio" name="tf29" value="true" class="mr-3">
+                        <span>True</span>
+                    </label>
+                    <label class="quiz-option">
+                        <input type="radio" name="tf29" value="false" class="mr-3">
+                        <span>False</span>
+                    </label>
+                </div>
+
+                <!-- Question 30 -->
+                <div class="quiz-question" data-question-id="tf30" data-correct-answer="true">
+                    <p class="text-lg font-medium mb-3">30. "Coaching & Mentoring" is one of the top 10 soft skills of an effective manager.</p>
+                    <label class="quiz-option">
+                        <input type="radio" name="tf30" value="true" class="mr-3">
+                        <span>True</span>
+                    </label>
+                    <label class="quiz-option">
+                        <input type="radio" name="tf30" value="false" class="mr-3">
+                        <span>False</span>
+                    </label>
+                </div>
+
+                <!-- Question 31 -->
+                <div class="quiz-question" data-question-id="tf31" data-correct-answer="false">
+                    <p class="text-lg font-medium mb-3">31. The Arabic word for Effectiveness is الكفاءة (Efficiency).</p>
+                    <label class="quiz-option">
+                        <input type="radio" name="tf31" value="true" class="mr-3">
+                        <span>True</span>
+                    </label>
+                    <label class="quiz-option">
+                        <input type="radio" name="tf31" value="false" class="mr-3">
+                        <span>False</span>
+                    </label>
+                </div>
+
+                <!-- Question 32 -->
+                <div class="quiz-question" data-question-id="tf32" data-correct-answer="false">
+                    <p class="text-lg font-medium mb-3">32. The Arabic word for Efficiency is الفعالية (Effectiveness).</p>
+                    <label class="quiz-option">
+                        <input type="radio" name="tf32" value="true" class="mr-3">
+                        <span>True</span>
+                    </label>
+                    <label class="quiz-option">
+                        <input type="radio" name="tf32" value="false" class="mr-3">
+                        <span>False</span>
+                    </label>
+                </div>
+
+                <!-- Question 33 -->
+                <div class="quiz-question" data-question-id="tf33" data-correct-answer="true">
+                    <p class="text-lg font-medium mb-3">33. Management integrates human efforts with non-human resources like machines and materials.</p>
+                    <label class="quiz-option">
+                        <input type="radio" name="tf33" value="true" class="mr-3">
+                        <span>True</span>
+                    </label>
+                    <label class="quiz-option">
+                        <input type="radio" name="tf33" value="false" class="mr-3">
+                        <span>False</span>
+                    </label>
+                </div>
+
+                <!-- Question 34 -->
+                <div class="quiz-question" data-question-id="tf34" data-correct-answer="false">
+                    <p class="text-lg font-medium mb-3">34. Management is not concerned with identifying problems, only solving them.</p>
+                    <label class="quiz-option">
+                        <input type="radio" name="tf34" value="true" class="mr-3">
+                        <span>True</span>
+                    </label>
+                    <label class="quiz-option">
+                        <input type="radio" name="tf34" value="false" class="mr-3">
+                        <span>False</span>
+                    </label>
+                </div>
+
+                <!-- Question 35 -->
+                <div class="quiz-question" data-question-id="tf35" data-correct-answer="true">
+                    <p class="text-lg font-medium mb-3">35. The target of a company (e.g., maximum production) is an example of the continuous nature of management.</p>
+                    <label class="quiz-option">
+                        <input type="radio" name="tf35" value="true" class="mr-3">
+                        <span>True</span>
+                    </label>
+                    <label class="quiz-option">
+                        <input type="radio" name="tf35" value="false" class="mr-3">
+                        <span>False</span>
+                    </label>
+                </div>
+
+                <!-- Question 36 -->
+                <div class="quiz-question" data-question-id="tf36" data-correct-answer="true">
+                    <p class="text-lg font-medium mb-3">36. The "Importance of Management" diagram shows that management "Ensures Employee Satisfaction".</p>
+                    <label class="quiz-option">
+                        <input type="radio" name="tf36" value="true" class="mr-3">
+                        <span>True</span>
+                    </label>
+                    <label class="quiz-option">
+                        <input type="radio" name="tf36" value="false" class="mr-3">
+                        <span>False</span>
+                    </label>
+                </div>
+
+                <!-- Question 37 -->
+                <div class="quiz-question" data-question-id="tf37" data-correct-answer="true">
+                    <p class="text-lg font-medium mb-3">37. The "Importance of Management" diagram shows that management "Enhances Decision-making".</p>
+                    <label class="quiz-option">
+                        <input type="radio" name="tf37" value="true" class="mr-3">
+                        <span>True</span>
+                    </label>
+                    <label class="quiz-option">
+                        <input type="radio" name="tf37" value="false" class="mr-3">
+                        <span>False</span>
+                    </label>
+                </div>
+
+                <!-- Question 38 -->
+                <div class="quiz-question" data-question-id="tf38" data-correct-answer="false">
+                    <p class="text-lg font-medium mb-3">38. Middle management appoints the executives for top-level management.</p>
+                    <label class="quiz-option">
+                        <input type="radio" name="tf38" value="true" class="mr-3">
+                        <span>True</span>
+                    </label>
+                    <label class="quiz-option">
+                        <input type="radio" name="tf38" value="false" class="mr-3">
+                        <span>False</span>
+                    </label>
+                </div>
+
+                <!-- Question 39 -->
+                <div class="quiz-question" data-question-id="tf39" data-correct-answer="false">
+                    <p class="text-lg font-medium mb-3">39. Lower-level managers are responsible for coordinating activities *within* their division or department.</p>
+                    <label class="quiz-option">
+                        <input type="radio" name="tf39" value="true" class="mr-3">
+                        <span>True</span>
+                    </label>
+                    <label class="quiz-option">
+                        <input type="radio" name="tf39" value="false" class="mr-3">
+                        <span>False</span>
+                    </label>
+                </div>
+
+                <!-- Question 40 -->
+                <div class="quiz-question" data-question-id="tf40" data-correct-answer="true">
+                    <p class="text-lg font-medium mb-3">40. "Critical Thinking" is one of the top 10 soft skills of an effective manager.</p>
+                    <label class="quiz-option">
+                        <input type="radio" name="tf40" value="true" class="mr-3">
+                        <span>True</span>
+                    </label>
+                    <label class="quiz-option">
+                        <input type="radio" name="tf40" value="false" class="mr-3">
+                        <span>False</span>
+                    </label>
+                </div>
+            </section>
+            
+            <!-- Submit Button -->
+            <div class="text-center pt-4">
+                <button type="submit" id="submit-btn" class="w-full sm:w-auto bg-gradient-to-r from-blue-600 to-blue-700 hover:from-blue-700 hover:to-blue-800 text-white font-bold text-lg py-3 px-12 rounded-lg shadow-lg hover:shadow-xl transition duration-300 ease-in-out transform hover:-translate-y-0.5">
+                    Submit Quiz
+                </button>
+            </div>
+        </form>
+
+        <!-- Results Section (Initially Hidden) -->
+        <div id="results-section" class="hidden bg-white p-6 sm:p-10 rounded-xl shadow-lg mt-10">
+            <h2 class="text-3xl font-bold mb-6 text-center text-gray-900">Quiz Results</h2>
+            <div class="text-center">
+                <span class="text-5xl font-extrabold bg-clip-text text-transparent bg-gradient-to-r from-green-500 to-blue-500" id="score">0</span>
+                <span class="text-2xl font-medium text-gray-600">/ <span id="total-questions">0</span></span>
+                <p class="text-xl text-gray-700 mt-2">Your Score</p>
+            </div>
+            
+            <div class="border-t border-gray-200 mt-8 pt-6">
+                <h3 class="text-xl font-semibold mb-4 text-gray-800">Answer Review</h3>
+                 <div id="answer-review" class="space-y-4">
+                    <!-- Feedback for objective questions will be inserted here -->
+                 </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="text-center mt-12 mb-8 text-gray-500 text-sm">
+        <p>&copy; 2025 Mostafa Gamal (EM1707). All rights reserved.</p>
+    </footer>
+
+    <script>
+        // --- Quiz Option Selection UI ---
+        document.querySelectorAll('.quiz-option input[type="radio"]').forEach(input => {
+            input.addEventListener('change', () => {
+                // Remove 'selected-option' from all labels in this question group
+                const groupName = input.name;
+                document.querySelectorAll(`input[name="${groupName}"]`).forEach(radio => {
+                    radio.closest('.quiz-option').classList.remove('selected-option');
+                });
+                
+                // Add 'selected-option' to the currently checked one's label
+                if (input.checked) {
+                    input.closest('.quiz-option').classList.add('selected-option');
+                }
+            });
+        });
+
+        // --- Quiz Submission Logic ---
+        document.getElementById('quiz-form').addEventListener('submit', function(event) {
+            event.preventDefault(); // Prevent the form from submitting normally
+
+            let score = 0;
+            const objectiveQuestions = document.querySelectorAll('.quiz-question');
+            const totalObjectiveQuestions = objectiveQuestions.length;
+            
+            const reviewContainer = document.getElementById('answer-review');
+            reviewContainer.innerHTML = ''; // Clear previous feedback
+            
+            objectiveQuestions.forEach((questionDiv, index) => {
+                const questionId = questionDiv.dataset.questionId;
+                const correctAnswer = questionDiv.dataset.correctAnswer;
+                const selectedOption = document.querySelector(`input[name="${questionId}"]:checked`);
+                const questionText = questionDiv.querySelector('p').textContent;
+                
+                // Reset styles
+                questionDiv.querySelectorAll('.quiz-option').forEach(label => {
+                    label.classList.remove('correct-answer', 'incorrect-answer', 'selected-option');
+                });
+                
+                let reviewHtml = '';
+
+                if (selectedOption) {
+                    const selectedValue = selectedOption.value;
+                    const selectedLabel = selectedOption.closest('.quiz-option');
+
+                    if (selectedValue === correctAnswer) {
+                        score++;
+                        selectedLabel.classList.add('correct-answer');
+                        reviewHtml = `<div class="p-3 bg-green-50 rounded-md">
+                                        <p class="font-medium text-green-800">${questionText}</p>
+                                        <p class="text-sm text-green-700">Your answer was correct!</p>
+                                      </div>`;
+                    } else {
+                        selectedLabel.classList.add('incorrect-answer');
+                        // Highlight the correct answer
+                        const correctLabel = document.querySelector(`input[name="${questionId}"][value="${correctAnswer}"]`).closest('.quiz-option');
+                        correctLabel.classList.add('correct-answer');
+                        
+                        reviewHtml = `<div class="p-3 bg-red-50 rounded-md">
+                                        <p class="font-medium text-red-800">${questionText}</p>
+                                        <p class="text-sm text-red-700">Your answer: "${selectedOption.nextElementSibling.textContent}"</p>
+                                        <p class="text-sm text-green-700 font-medium">Correct answer: "${correctLabel.querySelector('span').textContent}"</p>
+                                      </div>`;
+                    }
+                } else {
+                    // No answer selected
+                    const correctLabel = document.querySelector(`input[name="${questionId}"][value="${correctAnswer}"]`).closest('.quiz-option');
+                    correctLabel.classList.add('correct-answer');
+                    
+                    reviewHtml = `<div class="p-3 bg-yellow-50 rounded-md">
+                                    <p class="font-medium text-yellow-800">${questionText}</p>
+                                    <p class="text-sm text-yellow-700">You did not answer this question.</p>
+                                    <p class="text-sm text-green-700 font-medium">Correct answer: "${correctLabel.querySelector('span').textContent}"</p>
+                                  </div>`;
+                }
+                reviewContainer.innerHTML += reviewHtml;
+            });
+
+            // Update and show the results section
+            document.getElementById('score').textContent = score;
+            document.getElementById('total-questions').textContent = totalObjectiveQuestions;
+            document.getElementById('results-section').classList.remove('hidden');
+
+            // Disable the submit button and change text
+            const submitButton = document.getElementById('submit-btn');
+            submitButton.disabled = true;
+            submitButton.textContent = 'Results Below';
+            submitButton.classList.add('bg-gray-400', 'hover:bg-gray-400', 'cursor-not-allowed');
+            submitButton.classList.remove('bg-gradient-to-r', 'from-blue-600', 'to-blue-700', 'hover:from-blue-700', 'hover:to-blue-800', 'transform', 'hover:-translate-y-0.5');
+
+
+            // Scroll to results
+            document.getElementById('results-section').scrollIntoView({ behavior: 'smooth' });
+        });
+    </script>
+
+</body>
+</html>
+
+
